@@ -99,7 +99,7 @@ namespace Happy_Chang_Player
                 {
                     Cursor.Position = new Point((int)(p.X / _screenScale), (int)((p.Y + _pocketSize / 2) / _screenScale));
 
-                    ActionSimulator.ClickLeftMouseButton();
+                    MouseSimulator.ClickLeftMouseButton();
                     Console.WriteLine("Kill");
                 }
                 else

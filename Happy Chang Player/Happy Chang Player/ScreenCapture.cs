@@ -83,6 +83,7 @@ namespace Happy_Chang_Player
             Image img = Image.FromHbitmap(hBitmap);
             // free up the Bitmap object
             GDI32.DeleteObject(hBitmap);
+
             return img;
         }
 

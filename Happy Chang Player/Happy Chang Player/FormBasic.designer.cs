@@ -46,8 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDownRows = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownColumns = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.buttonTestFunction = new System.Windows.Forms.Button();
             this.textBoxTestInput = new System.Windows.Forms.TextBox();
             this.buttonArrangeWindows = new System.Windows.Forms.Button();
@@ -61,16 +59,19 @@
             this.checkBoxScreenRatioApply = new System.Windows.Forms.CheckBox();
             this.buttonGotoScreenLocation = new System.Windows.Forms.Button();
             this.buttonHappyChangHelper = new System.Windows.Forms.Button();
+            this.groupBoxScreenInfo = new System.Windows.Forms.GroupBox();
+            this.buttonGetAllProcessName = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumns)).BeginInit();
+            this.groupBoxScreenInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
-            this.pictureBox.Location = new System.Drawing.Point(41, 193);
+            this.pictureBox.Location = new System.Drawing.Point(41, 354);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(538, 488);
+            this.pictureBox.Size = new System.Drawing.Size(538, 327);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
@@ -133,7 +134,7 @@
             // labelScreenPhysicalSize
             // 
             this.labelScreenPhysicalSize.AutoSize = true;
-            this.labelScreenPhysicalSize.Location = new System.Drawing.Point(37, 90);
+            this.labelScreenPhysicalSize.Location = new System.Drawing.Point(11, 37);
             this.labelScreenPhysicalSize.Name = "labelScreenPhysicalSize";
             this.labelScreenPhysicalSize.Size = new System.Drawing.Size(216, 20);
             this.labelScreenPhysicalSize.TabIndex = 9;
@@ -141,7 +142,7 @@
             // 
             // textBoxScreenWidth
             // 
-            this.textBoxScreenWidth.Location = new System.Drawing.Point(251, 87);
+            this.textBoxScreenWidth.Location = new System.Drawing.Point(225, 34);
             this.textBoxScreenWidth.Name = "textBoxScreenWidth";
             this.textBoxScreenWidth.Size = new System.Drawing.Size(86, 26);
             this.textBoxScreenWidth.TabIndex = 10;
@@ -149,7 +150,7 @@
             // 
             // textBoxScreenHeight
             // 
-            this.textBoxScreenHeight.Location = new System.Drawing.Point(343, 87);
+            this.textBoxScreenHeight.Location = new System.Drawing.Point(317, 34);
             this.textBoxScreenHeight.Name = "textBoxScreenHeight";
             this.textBoxScreenHeight.Size = new System.Drawing.Size(86, 26);
             this.textBoxScreenHeight.TabIndex = 11;
@@ -158,7 +159,7 @@
             // labelScreenRatio
             // 
             this.labelScreenRatio.AutoSize = true;
-            this.labelScreenRatio.Location = new System.Drawing.Point(473, 89);
+            this.labelScreenRatio.Location = new System.Drawing.Point(447, 36);
             this.labelScreenRatio.Name = "labelScreenRatio";
             this.labelScreenRatio.Size = new System.Drawing.Size(106, 20);
             this.labelScreenRatio.TabIndex = 12;
@@ -167,21 +168,21 @@
             // textBoxScreenRatio
             // 
             this.textBoxScreenRatio.Enabled = false;
-            this.textBoxScreenRatio.Location = new System.Drawing.Point(585, 87);
+            this.textBoxScreenRatio.Location = new System.Drawing.Point(559, 34);
             this.textBoxScreenRatio.Name = "textBoxScreenRatio";
             this.textBoxScreenRatio.Size = new System.Drawing.Size(86, 26);
             this.textBoxScreenRatio.TabIndex = 13;
             // 
             // textBoxMonitoringAreaHeight
             // 
-            this.textBoxMonitoringAreaHeight.Location = new System.Drawing.Point(343, 128);
+            this.textBoxMonitoringAreaHeight.Location = new System.Drawing.Point(317, 75);
             this.textBoxMonitoringAreaHeight.Name = "textBoxMonitoringAreaHeight";
             this.textBoxMonitoringAreaHeight.Size = new System.Drawing.Size(86, 26);
             this.textBoxMonitoringAreaHeight.TabIndex = 16;
             // 
             // textBoxMonitoringAreaWidth
             // 
-            this.textBoxMonitoringAreaWidth.Location = new System.Drawing.Point(251, 128);
+            this.textBoxMonitoringAreaWidth.Location = new System.Drawing.Point(225, 75);
             this.textBoxMonitoringAreaWidth.Name = "textBoxMonitoringAreaWidth";
             this.textBoxMonitoringAreaWidth.Size = new System.Drawing.Size(86, 26);
             this.textBoxMonitoringAreaWidth.TabIndex = 15;
@@ -189,7 +190,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 131);
+            this.label2.Location = new System.Drawing.Point(11, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(199, 20);
             this.label2.TabIndex = 14;
@@ -198,7 +199,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(473, 131);
+            this.label3.Location = new System.Drawing.Point(447, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 20);
             this.label3.TabIndex = 17;
@@ -206,7 +207,7 @@
             // 
             // numericUpDownRows
             // 
-            this.numericUpDownRows.Location = new System.Drawing.Point(735, 128);
+            this.numericUpDownRows.Location = new System.Drawing.Point(709, 75);
             this.numericUpDownRows.Name = "numericUpDownRows";
             this.numericUpDownRows.Size = new System.Drawing.Size(64, 26);
             this.numericUpDownRows.TabIndex = 20;
@@ -218,7 +219,7 @@
             // 
             // numericUpDownColumns
             // 
-            this.numericUpDownColumns.Location = new System.Drawing.Point(659, 129);
+            this.numericUpDownColumns.Location = new System.Drawing.Point(633, 76);
             this.numericUpDownColumns.Name = "numericUpDownColumns";
             this.numericUpDownColumns.Size = new System.Drawing.Size(67, 26);
             this.numericUpDownColumns.TabIndex = 21;
@@ -227,23 +228,6 @@
             0,
             0,
             0});
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(100, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(329, 28);
-            this.comboBox1.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Profile:";
             // 
             // buttonTestFunction
             // 
@@ -366,11 +350,43 @@
             this.buttonHappyChangHelper.UseVisualStyleBackColor = true;
             this.buttonHappyChangHelper.Click += new System.EventHandler(this.buttonHappyChangHelper_Click);
             // 
-            // MainForm
+            // groupBoxScreenInfo
+            // 
+            this.groupBoxScreenInfo.Controls.Add(this.labelScreenPhysicalSize);
+            this.groupBoxScreenInfo.Controls.Add(this.textBoxScreenWidth);
+            this.groupBoxScreenInfo.Controls.Add(this.textBoxScreenHeight);
+            this.groupBoxScreenInfo.Controls.Add(this.labelScreenRatio);
+            this.groupBoxScreenInfo.Controls.Add(this.textBoxScreenRatio);
+            this.groupBoxScreenInfo.Controls.Add(this.label2);
+            this.groupBoxScreenInfo.Controls.Add(this.textBoxMonitoringAreaWidth);
+            this.groupBoxScreenInfo.Controls.Add(this.textBoxMonitoringAreaHeight);
+            this.groupBoxScreenInfo.Controls.Add(this.label3);
+            this.groupBoxScreenInfo.Controls.Add(this.numericUpDownRows);
+            this.groupBoxScreenInfo.Controls.Add(this.numericUpDownColumns);
+            this.groupBoxScreenInfo.Location = new System.Drawing.Point(26, 13);
+            this.groupBoxScreenInfo.Name = "groupBoxScreenInfo";
+            this.groupBoxScreenInfo.Size = new System.Drawing.Size(793, 145);
+            this.groupBoxScreenInfo.TabIndex = 37;
+            this.groupBoxScreenInfo.TabStop = false;
+            this.groupBoxScreenInfo.Text = "Screen Information";
+            // 
+            // buttonGetAllProcessName
+            // 
+            this.buttonGetAllProcessName.Location = new System.Drawing.Point(130, 193);
+            this.buttonGetAllProcessName.Name = "buttonGetAllProcessName";
+            this.buttonGetAllProcessName.Size = new System.Drawing.Size(207, 53);
+            this.buttonGetAllProcessName.TabIndex = 38;
+            this.buttonGetAllProcessName.Text = "Get All Process Names";
+            this.buttonGetAllProcessName.UseVisualStyleBackColor = true;
+            this.buttonGetAllProcessName.Click += new System.EventHandler(this.buttonGetAllProcessName_Click);
+            // 
+            // FormBasic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 838);
+            this.Controls.Add(this.buttonGetAllProcessName);
+            this.Controls.Add(this.groupBoxScreenInfo);
             this.Controls.Add(this.buttonHappyChangHelper);
             this.Controls.Add(this.buttonGotoScreenLocation);
             this.Controls.Add(this.checkBoxScreenRatioApply);
@@ -384,19 +400,6 @@
             this.Controls.Add(this.buttonArrangeWindows);
             this.Controls.Add(this.textBoxTestInput);
             this.Controls.Add(this.buttonTestFunction);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.numericUpDownColumns);
-            this.Controls.Add(this.numericUpDownRows);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxMonitoringAreaHeight);
-            this.Controls.Add(this.textBoxMonitoringAreaWidth);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxScreenRatio);
-            this.Controls.Add(this.labelScreenRatio);
-            this.Controls.Add(this.textBoxScreenHeight);
-            this.Controls.Add(this.textBoxScreenWidth);
-            this.Controls.Add(this.labelScreenPhysicalSize);
             this.Controls.Add(this.buttonMonitoring);
             this.Controls.Add(this.buttonGotoAppLocation);
             this.Controls.Add(this.buttonCapture);
@@ -404,13 +407,15 @@
             this.Controls.Add(this.textBoxLocationX);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox);
-            this.Name = "MainForm";
+            this.Name = "FormBasic";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Auto Mouse Clicks";
+            this.Text = "Development Tools";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownColumns)).EndInit();
+            this.groupBoxScreenInfo.ResumeLayout(false);
+            this.groupBoxScreenInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,8 +441,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDownRows;
         private System.Windows.Forms.NumericUpDown numericUpDownColumns;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonTestFunction;
         private System.Windows.Forms.TextBox textBoxTestInput;
         private System.Windows.Forms.Button buttonArrangeWindows;
@@ -451,6 +454,8 @@
         private System.Windows.Forms.CheckBox checkBoxScreenRatioApply;
         private System.Windows.Forms.Button buttonGotoScreenLocation;
         private System.Windows.Forms.Button buttonHappyChangHelper;
+        private System.Windows.Forms.GroupBox groupBoxScreenInfo;
+        private System.Windows.Forms.Button buttonGetAllProcessName;
     }
 }
 

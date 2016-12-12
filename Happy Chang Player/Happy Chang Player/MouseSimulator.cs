@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Happy_Chang_Player
 {
-    public class ActionSimulator
+    public class MouseSimulator
     {
         [DllImport("user32.dll", SetLastError = true)]
         static extern uint SendInput(uint nInputs, ref INPUT pInputs, int cbSize);

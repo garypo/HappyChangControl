@@ -825,7 +825,7 @@ namespace Happy_Chang_Player
             {
                 Point screenPos = pictureBoxToScreenPos(coordinates);
 
-                Process[] processes = Process.GetProcessesByName("Main");// LeapdroidVM");
+                Process[] processes = Process.GetProcessesByName("NoxVMHandle");// LeapdroidVM");
 
                 bool found = false;
                 foreach (Process p in processes)
@@ -1082,7 +1082,7 @@ namespace Happy_Chang_Player
 
         private void buttonAutoAssign_Click(object sender, EventArgs e)
         {
-            List<Process> processes = WindowManager.getRunningProcess("Main"); // LeapdroidVM");
+            List<Process> processes = WindowManager.getRunningProcess("NoxVMHandle"); // LeapdroidVM");
             for (int i = vmList.Count - 1; i >= 0; i--)
             {
                 HappyChang h = vmList[i];

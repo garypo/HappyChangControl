@@ -67,7 +67,7 @@ namespace Happy_Chang_Player
             timeOutLoop = 15;
             //loadProfile(1);
 
-            wm = new WindowManager("Nox App Player");// LeapdroidVM");
+            wm = new WindowManager("NoxVMHandle");// LeapdroidVM");
             captureDelay = normalCaptureDelay;
             clicksPerBatch = normalClicksPerBatch;
             clickDelay = normalClickDelay;
@@ -636,6 +636,38 @@ namespace Happy_Chang_Player
                 hcForm.StartPosition = FormStartPosition.CenterParent;
             }
             hcForm.ShowDialog(this);
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct RECT
+        {
+            public int Left;
+            public int Top;
+            public int Right;
+            public int Bottom;
+        }
+
+        [DllImport("user32.dll")]
+        public static extern bool GetWindowRect(IntPtr hWnd, out RECT lpRect);
+
+        private void buttonGetAllProcessName_Click(object sender, EventArgs e)
+        {
+            Process[] pList = Process.GetProcessesByName("NoxVMHandle");
+            foreach (Process p in pList)
+            {
+                RECT pRect;
+                Size cSize = new Size();
+                // get coordinates relative to window
+                GetWindowRect(p.MainWindowHandle, out pRect);
+                
+                Console.WriteLine("No. of handles: {0}", p.HandleCount);
+                cSize.Width = pRect.Right - pRect.Left;
+                cSize.Height = pRect.Bottom - pRect.Top;
+                Console.WriteLine("Name:{0}, ({1},{2},{3},{4})", p.ProcessName, pRect.Left, pRect.Top, cSize.Width, cSize.Height);
+                
+            }
+            WindowManager wm = new WindowManager("NoxVMHandle");
+            Console.WriteLine("no. of procs: {0}", wm.getNumberOfWindows());
         }
     }
 }

@@ -255,7 +255,7 @@ namespace Happy_Chang_Player
             //System.Windows.Forms.Cursor.Position = pt;
             SetForegroundWindow(proc.MainWindowHandle);
             Cursor.Position = appToLogicalScreen(p);
-            ActionSimulator.ClickLeftMouseButton();
+            MouseSimulator.ClickLeftMouseButton();
         }
 
         public void startApp(int row, int col)
